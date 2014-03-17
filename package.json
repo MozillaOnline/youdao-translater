@@ -1,4 +1,5 @@
 {
+    "_comment": "This file is deprecated. Edit install.rdf instead.",
     "license": "",
     "description": "Translate English webpage into Chinese using Netease Youdao webpage translator 2.0. Provide full-text translation, and isolated words translation based on the level of your English skill.",
     "author": "Mozilla Online Limited",
