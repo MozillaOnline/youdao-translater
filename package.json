@@ -6,7 +6,7 @@
     "homepage": "http://firefox.com.cn",
     "icon": "data/icon-32.png",
     "dependencies": ["api-utils", "addon-kit"],
-    "version": "0.5",
+    "version": "0.6",
     "lib": "lib",
     "fullName": "Webpage Translator",
     "main": "main",
