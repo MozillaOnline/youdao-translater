@@ -1,0 +1,101 @@
+/* vim: set ts=2 et sw=2 tw=80: */
+
+notification[value="mozcn-translation"] {
+  color: #484848 !important;
+  background-color: #efefef !important;
+  background-image: none !important;
+  border-top: none !important;
+  border-bottom: 1px solid #c4c4c4 !important;
+  -moz-binding: url("chrome://mozcn-translation/content/translation-infobar.xml#mozcn-translationbar");
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+  min-height: 35px !important;
+}
+
+notification[value="mozcn-translation"] .messageImage {
+  list-style-image: url(chrome://mozcn-translation/skin/translation-16.png);
+}
+
+@media (min-resolution: 1.25dppx) {
+  notification[value="mozcn-translation"] .messageImage {
+    list-style-image: url(chrome://mozcn-translation/skin/translation-16@2x.png);
+  }
+}
+
+.translation-menupopup arrowscrollbox {
+  padding-bottom: 0 !important;
+}
+
+notification[value="mozcn-translation"] button {
+  -moz-appearance: none !important;
+  border-width: 1px !important;
+  -moz-border-top-colors: none !important;
+  -moz-border-right-colors: none !important;
+  -moz-border-bottom-colors: none !important;
+  -moz-border-left-colors: none !important;
+  border-radius: 2px !important;
+  min-width: 0 !important;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.5), 0 1px rgba(255, 255, 255, 0.5) inset !important;
+}
+
+.translate-infobar-element {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+button.translate-infobar-element {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1)) repeat scroll 0% 0% padding-box transparent !important;
+  color: #333333 !important;
+  border: 1px solid !important;
+  border-color: rgba(23, 51, 78, 0.15) rgba(23, 51, 78, 0.17) rgba(23, 51, 78, 0.2) !important;
+  box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.5) inset, 0px 1px 0px rgba(255, 255, 255, 0.2) !important;
+  transition-property: background-color, border-color, box-shadow !important;
+  transition-duration: 150ms !important;
+  min-height: 22px !important;
+  min-width: 0 !important;
+  padding: 0 0.8em !important;
+  margin-left: 0.25em !important;
+  margin-right: 0.25em !important;
+}
+
+label.translate-infobar-element {
+  padding-top: 2px !important;
+}
+
+button.translate-infobar-element:hover {
+  background: #f0f0f0 !important;
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.1) inset,  0 0 0 1px hsla(0,0%,100%,.05) inset,  0 1px 0 hsla(210,54%,20%,.01),  0 0 4px hsla(206,100%,20%,.1) !important;
+}
+
+button.translate-infobar-element:active {
+  box-shadow: 0 1px 1px hsla(211,79%,6%,.1) inset,  0 0 1px hsla(211,79%,6%,.2) inset !important;
+  transition-duration: 0ms !important;
+}
+
+button.translate-infobar-element[anonid="translate"] {
+  color: #ffffff !important;
+  background: linear-gradient(#4cb1ff, #1793e5) !important;
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,  0 0 0 1px hsla(0,0%,100%,.1) inset,  0 1px 0 hsla(210,54%,20%,.03) !important;
+  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2) !important;
+  padding: 0 1.1em !important;
+}
+
+button.translate-infobar-element[anonid="translate"]:hover {
+  background-image: linear-gradient(#66bdff, #0d9eff) !important;
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,  0 0 0 1px hsla(0,0%,100%,.1) inset,  0 1px 0 hsla(210,54%,20%,.03),  0 0 4px hsla(206,100%,20%,.2) !important;
+}
+
+button.translate-infobar-element.options-menu-button {
+  -moz-padding-start: 0.5em !important;
+  -moz-padding-end: 0em !important;
+}
+
+button.translate-infobar-element.options-menu-button > .button-box > .button-menu-dropmarker {
+  display: -moz-box !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+button.translate-infobar-element.options-menu-button > .button-box > .button-menu-dropmarker > .dropmarker-icon {
+  width: 8px !important;
+}

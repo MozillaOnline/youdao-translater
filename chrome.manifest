@@ -1,0 +1,5 @@
+content mozcn-translation             chrome/content/
+
+locale  mozcn-translation    zh-CN    chrome/locale/zh-CN/
+
+skin    mozcn-translation    default  chrome/skin/
