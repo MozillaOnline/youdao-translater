@@ -33,7 +33,7 @@
                           oncommand="document.getBindingParent(this).translateThisPage();"/>
               <xul:button class="translate-infobar-element"
                           label="&mozcn-translation.notNowButton;" anonid="notNow"
-                          oncommand="document.getBindingParent(this).close();"/>
+                          oncommand="document.getBindingParent(this).notNow();"/>
             </xul:hbox>
 
           </xul:deck>
@@ -91,6 +91,13 @@
           ]]>
         </body>
       </method>
+      <method name="notNow">
+        <body>
+          <![CDATA[
+            this.close();
+          ]]>
+        </body>
+      </method>
       <method name="neverForThisSite">
         <body>
           <![CDATA[
@@ -99,13 +106,18 @@
             perms.add(uri, 'mozcn-translate', perms.DENY_ACTION);
 
             this.close();
+
+            this.Tracker.track({
+              click: 'neverForSite',
+              url: uri.spec
+            });
           ]]>
         </body>
       </method>
       <method name="neverForAllSites">
         <body>
           <![CDATA[
-            Services.prefs.setBoolPref('extensions.mozcn-translation.disabled', true);
+            Services.prefs.setCharPref('extensions.mozcn-translation.display', 'never');
 
             this.close();
           ]]>

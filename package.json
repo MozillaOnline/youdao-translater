@@ -12,5 +12,23 @@
     "fullName": "Webpage Translator",
     "main": "main",
     "id": "youdao-translate@mozillaonline.com",
-    "name": "youdao-translater"
+    "name": "youdao-translater",
+    "preferences-branch": "mozcn-translation",
+    "preferences": [{
+      "name": "display",
+      "title": "在英文网站",
+      "description": "",
+      "type": "radio",
+      "value": "ask",
+      "options": [{
+        "value": "ask",
+        "label": "询问是否翻译为中文"
+      }, {
+        "value": "auto",
+        "label": "自动启用有道翻译"
+      }, {
+        "value": "never",
+        "label": "不自动显示"
+      }]
+    }]
 }
