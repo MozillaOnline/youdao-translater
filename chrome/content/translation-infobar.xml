@@ -65,15 +65,17 @@
                            class="messageCloseButton close-icon tabbable"
                            xbl:inherits="hidden=hideclose"
                            tooltiptext="&mozcn-translation.closeTooltip;"
-                           oncommand="document.getBindingParent(this).close();"/>
+                           oncommand="document.getBindingParent(this).closeCommand();"/>
       </xul:hbox>
     </content>
     <implementation>
       <method name="init">
         <parameter name="aBrowser"/>
+        <parameter name="aTracker"/>
         <body>
           <![CDATA[
             this.browser = aBrowser;
+            this.tracker = aTracker;
           ]]>
         </body>
       </method>
@@ -88,13 +90,18 @@
             doc.body.appendChild(ele);
 
             this.close();
+
+            this.tracker.track({
+              event: 'click',
+              target: 'translate'
+            });
           ]]>
         </body>
       </method>
       <method name="notNow">
         <body>
           <![CDATA[
-            this.close();
+            this.closeCommand();
           ]]>
         </body>
       </method>
@@ -107,8 +114,9 @@
 
             this.close();
 
-            this.Tracker.track({
-              click: 'neverForSite',
+            this.tracker.track({
+              event: 'click',
+              target: 'neverForSite',
               url: uri.spec
             });
           ]]>
@@ -120,6 +128,18 @@
             Services.prefs.setCharPref('extensions.mozcn-translation.display', 'never');
 
             this.close();
+          ]]>
+        </body>
+      </method>
+      <method name="closeCommand">
+        <body>
+          <![CDATA[
+            this.close();
+
+            this.tracker.track({
+              event: 'click',
+              target: 'notNow'
+            });
           ]]>
         </body>
       </method>
