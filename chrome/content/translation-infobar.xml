@@ -53,7 +53,7 @@
                             label="&mozcn-translation.neverForAllSites;"
                             accesskey="&mozcn-translation.neverForAllSites.accesskey;"/>
               <xul:menuseparator/>
-              <xul:menuitem oncommand="openPreferences('paneContent');"
+              <xul:menuitem oncommand="document.getBindingParent(this).openPreferencePage()"
                             label="&mozcn-translation.moreSettings;"
                             accesskey="&mozcn-translation.moreSettings.accesskey;"/>
             </xul:menupopup>
@@ -72,10 +72,12 @@
       <method name="init">
         <parameter name="aBrowser"/>
         <parameter name="aTracker"/>
+        <parameter name="aUtils"/>
         <body>
           <![CDATA[
             this.browser = aBrowser;
             this.tracker = aTracker;
+            this.utils = aUtils;
           ]]>
         </body>
       </method>
@@ -128,6 +130,13 @@
             Services.prefs.setCharPref('extensions.mozcn-translation.display', 'never');
 
             this.close();
+          ]]>
+        </body>
+      </method>
+      <method name="openPreferencePage">
+        <body>
+          <![CDATA[
+            this.utils.openPreferencePage();
           ]]>
         </body>
       </method>
