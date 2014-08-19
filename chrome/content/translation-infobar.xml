@@ -94,7 +94,7 @@
             this.close();
 
             this.tracker.track({
-              event: 'click',
+              event: 'buttonClicked',
               target: 'translate'
             });
           ]]>
@@ -117,7 +117,7 @@
             this.close();
 
             this.tracker.track({
-              event: 'click',
+              event: 'buttonClicked',
               target: 'neverForSite',
               url: uri.spec
             });
@@ -146,7 +146,7 @@
             this.close();
 
             this.tracker.track({
-              event: 'click',
+              event: 'buttonClicked',
               target: 'notNow'
             });
           ]]>
