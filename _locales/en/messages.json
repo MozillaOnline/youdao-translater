@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "Webpage Translator",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Translate English webpage into Chinese using Netease Youdao webpage translator 2.0. Provide full-text translation, and isolated words translation based on the level of your English skill.",
+    "description": "Description of the extension."
+  }
+}

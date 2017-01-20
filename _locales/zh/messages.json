@@ -1,0 +1,11 @@
+{
+  "extensionName": {
+    "message": "网页翻译",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "使用火狐浏览英文网页，帮您一键翻译成中文，阅读无障碍。使用有道网页翻译2.0，您既可以选择全文翻译，也能按照您的英文水平、只翻译相应部分的词汇，阅读理解更方便。",
+    "description": "Description of the extension."
+  }
+}
